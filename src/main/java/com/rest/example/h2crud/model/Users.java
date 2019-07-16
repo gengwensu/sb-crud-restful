@@ -17,8 +17,4 @@ public class Users {
     private Long id;
     private String name;
     private String phone;
-
-    public Users() {
-        super();
-    }
 }
