@@ -1,4 +1,4 @@
-package com.rest.example.h2crud.model;
+package com.gsucode.example.h2crud.model;
 
 import lombok.Getter;
 import lombok.Setter;

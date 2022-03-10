@@ -1,4 +1,4 @@
-package com.rest.example.h2crud;
+package com.gsucode.example.h2crud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,8 +1,8 @@
-package com.rest.example.h2crud.controller;
+package com.gsucode.example.h2crud.controller;
 
-import com.rest.example.h2crud.exception.UserNotFoundException;
-import com.rest.example.h2crud.model.Users;
-import com.rest.example.h2crud.repository.UserRepository;
+import com.gsucode.example.h2crud.repository.UserRepository;
+import com.gsucode.example.h2crud.exception.UserNotFoundException;
+import com.gsucode.example.h2crud.model.Users;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

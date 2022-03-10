@@ -1,4 +1,4 @@
-package com.rest.example.h2crud;
+package com.gsucode.example.h2crud;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
