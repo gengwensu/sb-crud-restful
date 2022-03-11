@@ -15,21 +15,21 @@ import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 
+@Slf4j
 @RestController
 @RequestMapping("/users")
-@Slf4j
 public class UserController {
-
-    public static final Logger log = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     private UserRepository userRepository;
 
+    @CrossOrigin
     @GetMapping
     public List<Users> retrieveAllUsers() {
         return userRepository.findAll();
     }
 
+    @CrossOrigin
     @GetMapping("/{id}")
     public Users retrieveUser(@PathVariable long id) {
         Optional<Users> user = userRepository.findById(id);
@@ -39,11 +39,13 @@ public class UserController {
         return user.get();
     }
 
+    @CrossOrigin
     @DeleteMapping("/{id}")
     public void deleteUser(@PathVariable long id) {
         userRepository.deleteById(id);
     }
 
+    @CrossOrigin
     @PostMapping()
     public ResponseEntity<Users> createUser(@RequestBody Users user) {
         Users savedUser = userRepository.save(user);
@@ -55,6 +57,7 @@ public class UserController {
         return ResponseEntity.created(location).body(savedUser);
     }
 
+    @CrossOrigin
     @PutMapping("/{id}")
     public ResponseEntity<Users> updateUser(@RequestBody Users user, @PathVariable long id) {
 

@@ -32,6 +32,7 @@ public class LoggingFilter implements Filter {
         } finally {
             String uri = request.getRequestURI();
             if (uri != null
+                    && !uri.contains("h2-console")
                     && !uri.contains("swagger-ui")
                     && !uri.contains("api-docs")
                     && !uri.contains("swagger-resources")) {
